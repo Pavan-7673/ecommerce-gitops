@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-frontend
+  namespace: ecommerce
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: ecommerce-frontend
+
+  template:
+    metadata:
+      labels:
+        app: ecommerce-frontend
+
+    spec:
+      containers:
+        - name: ecommerce-frontend
+          image: pavanreddy8/ecommerce-frontend:1.0
+
+          ports:
+            - containerPort: 80
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
