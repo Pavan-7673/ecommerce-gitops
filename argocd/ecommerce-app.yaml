@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/admin/ecommerce-gitops.git
+    repoURL: https://github.com/Pavan-7673/ecommerce-gitops.git
     targetRevision: main
     path: .
 
